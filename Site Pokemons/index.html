@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Site dos Mestres Pokémon</title>
+    <style>
+        body {
+            background-color: #eeff00;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #000000;
+        }
+
+        input[type="text"], input[type="password"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            border: none;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #4caf50;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a048;
+        }
+
+        .message {
+            text-align: center;
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao Site dos Mestres Pokémon</h1>
+        <h2>Cadastro</h2>
+        <form id="cadastroForm">
+            <input type="text" id="nome" placeholder="Nome">
+
+            <input type="text" id="idMestre" placeholder="ID do Mestre e escolha a data da captura">
+
+            <label for="date" placeholder="Data da Captura:"></label><br>
+            <input type="date" id="dataNascimento" name="dataNascimento" required><br>
+            
+            <select id="regiao">
+                <option value="Kanto">Kanto</option>
+                <option value="Johto">Johto</option>
+                <option value="Hoenn">Hoenn</option>
+                <option value="Sinnoh">Sinnoh</option>
+                <option value="Unova">Unova</option>
+                <option value="Kalos">Kalos</option>
+            </select>
+
+            <label for="pokebolas-usadas">Quantidade de Pokébolas usadas:</label><br/>
+                <input type="number" id="pokebolas-usadas" name="pokebolas-usadas" required><br/><br/>
+                <label for="tipo">Tipo:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="Normal">Normal</option>
+                    <option value="Fogo">Fogo</option>
+                    <option value="Água">Água</option>
+                    <option value="Ar">Ar</option>
+                    <option value="Planta">Planta</option>
+                    <option value="Elétrico">Elétrico</option>
+                    <option value="Gelo">Gelo</option>
+                </select>
+
+            <input type="submit" value="Cadastrar">
+        </form>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="idMestreLogin" placeholder="ID do Mestre">
+            <input type="password" id="senha" placeholder="Senha">
+            <input type="submit" value="Login">
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+</body>
+</html>
